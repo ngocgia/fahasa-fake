@@ -1,0 +1,29 @@
+a{
+    color: darkorange;
+}
+p{
+    line-height: 1.5;
+}
+.main-section{
+    background-color: white;
+}
+.main{
+    padding: 5px 10px;
+    font-size: 14px;
+}
+.title-main{
+    padding-top:10px ;
+}
+.text-main {
+    line-height: 1.5;
+    text-indent: 35px;
+}
+.table-infor{
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.table-infor table, th, td{
+    padding: 10px;
+}
