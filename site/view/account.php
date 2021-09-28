@@ -40,10 +40,7 @@
                         if($result){
                             while($row=$result->fetch_assoc()){
                     ?>
-                    <div class="infor-user">
-                        <h2 class="sidebar-title"> <?php  echo $row["name"] ?></h2>
-                        <?php echo '<img src="../img/'.$row["avata"].'" alt="">';?>
-                    </div>
+                  
                     </div> 
                     
                 </div>

@@ -13,34 +13,131 @@
 <head>
   <meta content='30' http-equiv='refresh'/> 
   <title>Quản lí khách hàng</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> 
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <script src="js/jquery-1.11.1.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/styleadmin.css">
-   <script type="text/javascript" src="jquery-3.3.1.min.js"></script> 
-  <script type="text/javascript" src="public/alertify/src/alertify.js"></script>
-  <link rel="stylesheet" type="text/css" href="public/alertify/themes/alertify.core.css">
-  <link rel="stylesheet" type="text/css" href="public/alertify/themes/alertify.default.css">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="public/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+
+  <link rel="stylesheet" href="public/bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="public/bower_components/Ionicons/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="public/dist/css/AdminLTE.min.css">
+  
+  <!-- Viền trên +Thanh chức năng  -->
+  <link rel="stylesheet" href="public/dist/css/skins/skin-blue.min.css">
+
+ 
+  <!-- Google Font -->
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+     <!--  <script type="text/javascript">
+       \
+      </script> -->
 </head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
 
-<body>
-<div class="container"> 
- <div class="row"> 
-  <h3 ><a href="index.php">Về HomePage</a></h3> 
+  <!-- Main Header -->
+  <header class="main-header">
 
-  <div class="col-md-12 col-md-offset-1"> 
-   <div class="panel panel-default panel-table"> 
-    <div class="panel-heading"> 
-     <div class="row"> 
-      <div class="col col-xs-6"> 
-       <h3 class="panel-title">Danh sách khách hàng</h3> 
-      </div> 
-      <div class="col col-xs-6 text-right"> 
+    <!-- Logo -->
+    <a href="#" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"></span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>Admin</b></span>
+    </a>
+
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top" role="navigation">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+      <!-- Navbar Right Menu -->
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <li >
+            <!-- Menu Toggle Button -->
+
+              <a href="?action=logout" >Đăng xuất</a>
+           </li>
+         </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="public/dist/img/ava.jpg" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+
+
+
+
+         <!-- CHỖ ĐIỀN TÊN KẾ BÊN NÚT XANH ONLINE -->
+
+
+
+
+
+          <p><?php echo session::get("name") ?></p>
+          <!-- Status -->
+          <!-- <a href="#"><i class="fa fa-circle text-success"></i> Online</a> -->
+        </div>
+      </div>
+      
+      <!-- search form (Optional) -->
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Search...">
+          <span class="input-group-btn">
+              <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+              </button>
+            </span>
+        </div>
+      </form>
+      <!-- /.search form -->
+
+      <!-- Sidebar Menu -->
+      <ul class="sidebar-menu">
+        <li class="header">Chức năng</li>
+        <li><a href="?controller=product"><i class="fa fa-link"></i> <span>Quản lý sản phẩm</span></a></li>
+        <li><a href="?controller=user" ><i class="fa fa-link"></i> <span>Quản lý khách hàng</span></a></li>
+        <li><a href="?controller=order" ><i class="fa fa-link"></i> <span>Quản lý đơn hàng</span></a></li>
+		    <li><a href="?controller=response" ><i class="fa fa-link"></i> <span>Quản lý phản hồi</span></a></li>
+      </ul>
+      <!-- /.sidebar-menu -->
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper" >
+    <!-- Content Header (Page header) -->
+   
+    <!-- Main content -->
+    <section class="content container-fluid" >
+    <div class="header-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+					<!-- Menu admin đăng nhập -->
+					<h3 ><a href="index.php">Về HomePage</a></h3> 
+                </div>
+            </div>
+        </div>  
+</div> <!-- End header area -->
+<div class="col col-xs-12 text-right"> 
        <a href="index.php?controller=user&action=add" target="_blank"><button type="button" class="btn btn-sm btn-primary btn-create">Thêm mới</button></a>
       </div> 
-     </div> 
-    </div> 
     <div class="panel-body"> 
      <table class="table table-striped table-bordered table-list"> 
       <thead> 
@@ -52,7 +149,7 @@
         <th>Email</th>
         <th>Số điện thoại</th>
         <th>Địa chỉ</th>
-        <th>Avata</th>
+     
        </tr> 
       </thead> 
       <tbody>
@@ -71,7 +168,7 @@
                     <td><?php  echo $row["email"]?></td> 
                     <td><?php  echo $row["phone"]?></td>
                     <td><?php  echo $row["address"]?></td> 
-                    <td><?php  echo $row["avata"]?></td>
+                   
                     </tr>   
                     
                     
@@ -83,6 +180,23 @@
       
      </tbody></table> 
     </div> 
+     
+     
+    </section>
+    <!-- /.content -->
+  </div>
+  
+
+<!-- jQuery 3 -->
+<script src="public/bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="public/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- AdminLTE App -->
+<script src="public/dist/js/adminlte.min.js"></script>
+
+
+
+   
    </div> 
   </div> 
  </div>

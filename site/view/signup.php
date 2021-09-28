@@ -36,7 +36,7 @@
       <input name="email" type="email" placeholder="Email"/>
       <input name="phone" type="text" placeholder="Số điện thoại"/>
       <input name="address" type="text" placeholder="Địa chỉ"/>
-      <input name="avata" type="file" placeholder="Ảnh đại diện"/>
+
       <button name="signup" type="submit">Đăng kí</button>
       <p >
         <button name="huy" type="submit"  ><a href="?controller=login" style="text-decoration: none;color: #fff"> Hủy</a> </button>
